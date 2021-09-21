@@ -1,3 +1,8 @@
+const AIGUILLEHR = document.querySelector("#hour");
+const AIGUILLEMIN = document.querySelector("#minute");
+const AIGUILLESEC = document.querySelector("#second");
+
+
 //Extraire l'heure actuelle à l'aide de l'objet Date()
 const date = new Date();
 
@@ -34,16 +39,15 @@ function demarrerLaMontre(){
 
 // Déplacer les aiguilles 
 // Hint : Tous les aiguilles doivent se déplacer chaque seconde selon un degré
- // Selectionner les aiguilles de montre
+// Selectionner les aiguilles de montre
 
-const AIGUILLEHR = document.querySelector("#hour");
-const AIGUILLEMIN = document.querySelector("#minute");
-const AIGUILLESEC = document.querySelector("#second");
 
-AIGUILLEHR.style.transform = "rotate(" + tempsHourDegre + "deg)";
-AIGUILLEMIN.style.transform = "rotate(" + tempsMinDegre + "deg)";
-AIGUILLESEC.style.transform = "rotate(" + tempsSecDegre + "deg)";
-}
+
+    AIGUILLEHR.style.transform = "rotate(" + tempsHourDegre + "deg)";
+    AIGUILLEMIN.style.transform = "rotate(" + tempsMinDegre + "deg)";
+    AIGUILLESEC.style.transform = "rotate(" + tempsSecDegre + "deg)";
+    
+    }
 
 // Executer la fonction chaque second
 var interval = setInterval(demarrerLaMontre, 1000);
